@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: -moz-linear-gradient(left, rgba(20,118,156,1) 0%, rgba(20,118,156,0.99) 15%, rgba(188,224,238,0.95) 100%);
+}
+/* Medidas del container */
+.container-fluid{
+    max-width: 1140px;
+    padding: 0;
+}
+
+/* Logo que envía al home */
+.logo-company{
+    display: flex;
+    justify-content: center;
+}
+a .logo{
+    max-width: 120px;
+
+}
+
+/* Contenedor del formulario */
+main #register-form{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(225, 225, 225, 0.5);
+}
+/* Centra el título principal */
+.main-title{
+    display: flex;
+    justify-content: center;
+}
+
+/* Botón submit */
+.column{
+    margin: 0 auto; /*centra el botón con para tamaños de pantalla lg*/
+}
+.btn{
+    width: 100%; /*tamaño del botón para pantallas xs y sm*/
+}
+
+/* Posicionamiento de las líneas divisorias */
+.btn-social-network{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+/* Ancho de las líneas */
+.btn-social-network hr{
+    width: 30%;
+}
+/* Tamaño de los botones */
+.btn-social-network a{
+    width: 15%;
+    max-width: 40px;
+}
+/* <p> debajo del botón */
+main section p{
+    margin-top: 25px;
+}

@@ -1,0 +1,72 @@
+main{
+    margin: 0px;
+    max-width: 1140px;
+    padding: 0;
+    padding-top: 20px;
+}
+
+section.products-list{
+    margin-bottom: 20px;
+}
+
+section.products-list article.product-added{
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    border-right: 1px solid rgba(0, 0, 0, .125);
+    border-left: 1px solid rgba(0, 0, 0, .125);
+    margin: 0;
+}
+
+section.products-list article.product-added:first-child{
+    border-radius: 5px 5px 0 0;
+}
+
+section.products-list article.product-added:last-child{
+    border-radius: 0 0 5px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+section.products-list article.product-added div.product-added-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.products-list article.product-added div.remove-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+
+
+
+
+section.proceder{
+    margin-bottom: 20px;
+}
+
+section.proceder form{
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+section.proceder form span{
+    font-size: 2rem;
+}
+
+section.proceder form button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#error{
+    text-align: left;
+}
+
+#error ul{
+    margin: 0;
+}

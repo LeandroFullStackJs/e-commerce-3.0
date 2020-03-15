@@ -1,0 +1,98 @@
+main{
+    margin: 0px;
+    max-width: 1140px;
+    padding: 0;
+}
+
+section.row{
+    max-width: 1140px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+h2{
+    width: 100%;
+}
+
+.linkToPerfil{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.linkToPerfil a{
+    margin-bottom: 8px;
+    margin-left: auto;
+}
+
+
+section.products-list{
+    margin-bottom: 20px;
+}
+
+section.products-list article.product-added{
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    border-right: 1px solid rgba(0, 0, 0, .125);
+    border-left: 1px solid rgba(0, 0, 0, .125);
+    margin: 0;
+}
+
+section.products-list article.product-added:first-child{
+    border-radius: 5px 5px 0 0;
+}
+
+section.products-list article.product-added:last-child{
+    border-radius: 0 0 5px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+section.products-list article.product-added div.product-added-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.products-list article.product-added div.purchase-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+@media (max-width: 420.98px){
+    section.row{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575.98px){
+
+    section.row{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    section.products-list article.product-added{
+        flex-direction: column;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .linkToPerfil a{
+        margin: 0;
+        text-align: center;
+
+    }
+
+    section.products-list article.product-added div.product-added-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+

@@ -1,0 +1,125 @@
+/* NOVEDADES */
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1 {
+    font-size: 500%;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.first-item {
+    color: black;
+}
+
+.second-item {
+    color: red;
+}
+
+.carousel-indicators {
+    color: black;
+}
+
+
+section.carousel {
+    margin-top: 35px;
+    max-width: 1140PX;
+}
+
+section.carousel article {
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+div.carousel-item{
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 5px;
+}
+
+div.bd-example {
+    padding: 15px;
+}
+
+section.cards {
+    margin-top: 31px;
+    padding: 0 50px;
+}
+
+section.cards h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.cards article.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+section.cards article.card div.card-image {
+    padding: 15px;
+
+}
+
+section.cards article.card img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+section.cards article.card div.card-text p {
+    text-align: justify;
+}
+
+section.newsletter form {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section.newsletter form h3 {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+    section.cards article.card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*section.cards article.card:nth-child(odd) div.card-image{
+        flex-direction: column-reverse;
+    } */
+
+    section.newsletter form h3 {
+        text-align: center;
+
+    }
+
+}
