@@ -57,31 +57,31 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/t-shirts-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">T-shirts</a>
+                        <a class="btn hvr-hover" href="#">Celulares</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/shirt-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Shirt</a>
+                        <a class="btn hvr-hover" href="#">Teclados</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/wallet-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Wallet</a>
+                        <a class="btn hvr-hover" href="#">Laptops</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/women-bag-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Bags</a>
+                        <a class="btn hvr-hover" href="#">Headsets</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/shoes-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Shoes</a>
+                        <a class="btn hvr-hover" href="#">Mouse</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/women-shoes-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Women Shoes</a>
+                        <a class="btn hvr-hover" href="#">Auriculares</a>
                     </div>
                 </div>
             </div>
