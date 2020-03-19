@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Editar marca')
+{{-- @section('title', 'Editar marca') --}}
 
-@section('main')
+@section('content')
 <br><br>
     <h1>Formulario de modificación de una marca</h1>
 
@@ -15,7 +15,7 @@
             </ul>
         </div>
     @endif
-    
+
         <form action="" method="post">
             @csrf
             Marca:

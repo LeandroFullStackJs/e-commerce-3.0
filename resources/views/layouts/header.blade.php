@@ -8,7 +8,7 @@
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> 10% de descuento amego
+                                    <i class="fab fa-opencart"></i> 10% de descuento por el corona virus
                                 </li>
                                 <li>
                                     <i class="fab fa-opencart"></i> pero te cobramos un 30% mas
@@ -21,8 +21,8 @@
                     <div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
 
-						<option>$ USD</option>
-                        <option>$ Pesos</option>
+						<option>$ ARS</option>
+                        {{-- <option>$ USD</option> --}}
 
 					</select>
                     </div>
@@ -75,8 +75,9 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-                        <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Product</a>
+                        <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+                        {{-- <li class="dropdown megamenu-fw">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
@@ -131,7 +132,7 @@
                                     <!-- end row -->
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -149,9 +150,9 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#">
+                        <li class="side-menu"><a href="/cart">
 						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
+                            {{-- <span class="badge">3</span> --}}
 					</a></li>
                     </ul>
                 </div>

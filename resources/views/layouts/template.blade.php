@@ -13,7 +13,7 @@
 
     <body>
       @include('sweetalert::alert')
-    
+
         <header>
             <section class='logo-usuario'>
             <article class='logo'>

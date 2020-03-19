@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Editar producto')
+{{-- @section('title', 'Editar producto') --}}
 
-@section('main')
+@section('content')
 <br><br>
     <h1>Agregar imagenes de {{$ProductDetails->name}}</h1>
 

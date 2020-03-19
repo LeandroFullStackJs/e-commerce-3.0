@@ -10,7 +10,7 @@
                 <div class="col-lg-12">
                     <h2>Shop</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active">Shop</li>
                     </ul>
                 </div>
@@ -46,7 +46,7 @@
 
                                <div class="list-group-collapse sub-men">
 
-                                    <a class="list-group-item list-group-item-action" href="{{route('products.list', ['Category'=> $Category->name])}}" aria-expanded="true" aria-controls="sub-men1">{{$Category->name}} <small class="text-muted">(50)</small>
+                                    <a class="list-group-item list-group-item-action" href="{{route('products.list', ['Category'=> $Category->name])}}" aria-expanded="true" aria-controls="sub-men1">{{$Category->name}} {{-- <small class="text-muted">(50)</small> --}}
 								                              </a>
 
 
@@ -71,7 +71,7 @@
 
                         <div class="filter-brand-left">
                             <div class="title-left">
-                                <h3>Brand</h3>
+                                <h3>Brands</h3>
                             </div>
 
                             <div class="brand-box">
@@ -154,7 +154,7 @@
                                         <div style="text-align: left">No items found</div>
 
 
-                                      @endforelse
+                                       @endforelse
 
 
                                     </div>
@@ -167,9 +167,10 @@
                                     <div class="list-view-box">
                                       <h1 align="center">{{$CategoryName}}</h1>
                                         <div class="row">
-                                          @forelse ($Products as $Product)
+                                           @forelse ($Products as $Product)
                                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                               <a href="products/{{$Product->id}}" class="product">
+                                                  </a>
                                                 <div class="products-single fix">
                                                     <div class="box-img-hover">
                                                         <div class="type-lb">

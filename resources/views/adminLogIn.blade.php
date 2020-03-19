@@ -1,8 +1,15 @@
-@extends('layouts.template')
 
-@section('title', 'Ingreso de administradores')
+@extends('layouts.master')
 
-@section('main')
+{{-- @extends('layouts.template') --}}
+
+{{-- @section('title', 'Ingreso de administradores') --}}
+
+@section('content')
+  
+<body>
+    @include('sweetalert::alert')
+  <div class="my-account-box-main">
 
 <h1>Ingreso de administradores</h1>
 
@@ -29,5 +36,8 @@
 
     <input type="submit" value="Entrar">
 </form>
+</div>
+
+</body>
 
 @endsection

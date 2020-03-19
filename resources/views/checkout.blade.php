@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <h2>Checkout</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item"><a href="/">Shop</a></li>
                         <li class="breadcrumb-item active">Checkout</li>
                     </ul>
                 </div>
@@ -87,21 +87,8 @@
                                 <label class="custom-control-label" for="save-info">Save this information for next time</label>
                             </div> --}}
                             <hr class="mb-4">
-                            <div class="title"> <span>Payment</span> </div>
-                            <div class="d-block my-3">
-                                <div class="custom-control custom-radio">
-                                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                    <label class="custom-control-label" for="credit">Credit card</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="debit">Debit card</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="paypal">Paypal</label>
-                                </div>
-                            </div>
+
+
                             <div class="mb-3">
                                     <label for="name_on_card">Name on card</label>
                                     <input type="text" class="form-control"  id="name_on_card" name="name_on_card" value=""> <small class="text-muted">Full name as displayed on card</small>
@@ -146,7 +133,7 @@
                                 </div>
 
                             </div>
-                            <hr class="mb-1">
+
 
 
                           {{-- </form> --}}

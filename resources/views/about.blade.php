@@ -22,7 +22,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h2 class="noo-sh-title">We are <span>ThewayShop</span></h2>
+                    <h2 class="noo-sh-title">We are <span>ACBA-MART</span></h2>
                     <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
                         voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
                         sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
@@ -63,7 +63,7 @@
                     <div class="hover-team">
                         <div class="our-team"> <img src="{{asset('front_assets/images/img-1.jpg')}}" alt="" />
                             <div class="team-content">
-                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">Ricardo</h3> <span class="post">Web Developer</span> </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -89,7 +89,7 @@
                     <div class="hover-team">
                         <div class="our-team"> <img src="{{asset('front_assets/images/img-2.jpg')}}" alt="" />
                             <div class="team-content">
-                                <h3 class="title">Kristiana</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">Benjamin</h3> <span class="post">Web Developer</span> </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -115,7 +115,7 @@
                     <div class="hover-team">
                         <div class="our-team"> <img src="{{asset('front_assets/images/img-3.jpg')}}" alt="" />
                             <div class="team-content">
-                                <h3 class="title">Steve Thomas</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">Solano</h3> <span class="post">Web Developer</span> </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>
@@ -141,7 +141,7 @@
                     <div class="hover-team">
                         <div class="our-team"> <img src="{{asset('front_assets/images/img-1.jpg')}}" alt="" />
                             <div class="team-content">
-                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
+                                <h3 class="title">Leandro</h3> <span class="post">Web Developer</span> </div>
                             <ul class="social">
                                 <li>
                                     <a href="#" class="fab fa-facebook"></a>

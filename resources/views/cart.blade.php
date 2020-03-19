@@ -78,7 +78,7 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="coupon-box">
                         <div class="input-group input-group-sm">
-                            <input class="form-control" placeholder="Enter your coupon code" aria-label="Coupon code" type="text">
+                            <input class="form-control" placeholder="No hay cupones porque es Argentina" aria-label="Coupon code" type="text">
                             <div class="input-group-append">
                                 <button class="btn btn-theme" type="button">Apply Coupon</button>
                             </div>
@@ -99,18 +99,18 @@
                             <h4> sub total </h4>
                             <div class="ml-auto font-weight-bold"> {{$totalPrice}} </div>
                         </div>
-                        <div class="d-flex">
+                        {{-- <div class="d-flex">
                             <h4>Discount</h4>
                             <div class="ml-auto font-weight-bold"> $ 40 </div>
-                        </div>
+                        </div> --}}
                         <hr class="my-1">
-                        <div class="d-flex">
+                        {{-- <div class="d-flex">
                             <h4>Coupon Discount</h4>
                             <div class="ml-auto font-weight-bold"> $ 10 </div>
-                        </div>
+                        </div> --}}
                         <div class="d-flex">
                             <h4>Tax</h4>
-                            <div class="ml-auto font-weight-bold"> $ 2 </div>
+                            <div class="ml-auto font-weight-bold"> Free </div>
                         </div>
                         <div class="d-flex">
                             <h4>Shipping Cost</h4>

@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Administrador de usuarios')
+{{-- @section('title', 'Administrador de usuarios') --}}
 
-@section('main')
+@section('content')
     <h1>Panel de administración de usuarios</h1>
 
     <a href="admin" class="btn btn-outline-secondary m-3">Volver a principal</a>
@@ -22,7 +22,7 @@
               </tr>
         </thead>
     <tbody>
-        
+
         @foreach($Customers as $Customer)
 
             <tr>
@@ -38,7 +38,7 @@
             </tr>
 
         @endforeach
-        
+
     </tbody>
     </table>
 

@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Agregar un producto')
+{{-- @section('title', 'Agregar un producto') --}}
 
-@section('main')
+@section('content')
 <br><br>
     <h1>Formulario de alta de un producto</h1>
 
@@ -46,7 +46,7 @@
                 @if(old('category_id') == $Category->id)
                     <option value="{{$Category->id}}" selected>{{$Category->name}}</option>
                 @else
-                    <option value="{{$Category->id}}">{{$Category->name}}</option>  
+                    <option value="{{$Category->id}}">{{$Category->name}}</option>
                 @endif
             @endforeach
         </select>
@@ -59,7 +59,7 @@
                 @if(old('mark_id') == $Mark->id)
                     <option value="{{$Mark->id}}" selected>{{$Mark->name}}</option>
                 @else
-                    <option value="{{$Mark->id}}">{{$Mark->name}}</option>  
+                    <option value="{{$Mark->id}}">{{$Mark->name}}</option>
                 @endif
             @endforeach
         </select>

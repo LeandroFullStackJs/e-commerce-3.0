@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Administrador de Marcas')
+{{-- @section('title', 'Administrador de Marcas') --}}
 
-@section('main')
+@section('content')
     <h1>Panel de administración de Marcas</h1>
 
     <a href="admin" class="btn btn-outline-secondary m-3">Volver al panel</a>
@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        
+
         @foreach($Marks as $Mark)
 
             <tr>

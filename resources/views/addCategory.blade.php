@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Agregar nueva categoria')
+{{-- @section('title', 'Agregar nueva categoria') --}}
 
-@section('main')
+@section('content')
 <br><br>
     <h1>Formulario de alta de una categoría</h1>
 

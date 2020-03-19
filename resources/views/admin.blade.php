@@ -1,8 +1,11 @@
-@extends('layouts.template')
+{{-- @extends('layouts.template') --}}
+@extends('layouts.master')
 
-@section('title', 'Panel de administracion')
 
-@section('main')
+
+@section('content')
+  <body>
+      @include('sweetalert::alert')
     <h1>Administración</h1>
 
     <div class="list-group">
@@ -23,4 +26,5 @@
     <br>
 
     <a class="py-2" href="adminLogOut">Cerrar sesion de administrador</a>
+    
 @endsection

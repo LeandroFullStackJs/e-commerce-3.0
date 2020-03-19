@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Agregar nueva marca')
+{{-- @section('title', 'Agregar nueva marca') --}}
 
-@section('main')
+@section('content')
 <br><br>
     <h1>Formulario de alta de una marca</h1>
 

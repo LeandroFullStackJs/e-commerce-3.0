@@ -1,8 +1,8 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Administrador de Categorias')
+{{-- @section('title', 'Administrador de Categorias') --}}
 
-@section('main')
+@section('content')
     <h1>Panel de administración de categorías</h1>
 
     <a href="/admin" class="btn btn-outline-secondary m-3">Volver al panel</a>
@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        
+
         @foreach($Categories as $Category)
 
             <tr>

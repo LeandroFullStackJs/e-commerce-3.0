@@ -11,9 +11,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> ACBA-MART</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p><a class="btn hvr-hover" href="/products">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -23,9 +23,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> ACBA-MART</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p><a class="btn hvr-hover" href="/products">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -35,9 +35,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> ACBA-MART</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p><a class="btn hvr-hover" href="/products">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -57,31 +57,31 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/t-shirts-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Celulares</a>
+                        <a class="btn hvr-hover" href="/products?Category=Celulares">Celulares</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/shirt-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Teclados</a>
+                        <a class="btn hvr-hover" href="/products?Category=Teclados">Teclados</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/wallet-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Laptops</a>
+                        <a class="btn hvr-hover" href="/products">Laptops</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/women-bag-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Headsets</a>
+                        <a class="btn hvr-hover" href="/products?Category=Auriculares%20con%20cable">Headsets</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/shoes-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Mouse</a>
+                        <a class="btn hvr-hover" href="/products">Mouse</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/women-shoes-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Auriculares</a>
+                        <a class="btn hvr-hover" href="/products?Category=Auriculares%20inalámbricos">Auriculares</a>
                     </div>
                 </div>
             </div>
