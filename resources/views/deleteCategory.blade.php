@@ -1,8 +1,5 @@
-@extends('layouts.template')
-
-@section('title', 'Eliminar categoria')
-
-@section('main')
+@extends('layouts.master')
+@section('content')
 
 <br>
 <h1>Eliminar categoría</h1>

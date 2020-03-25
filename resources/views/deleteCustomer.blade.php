@@ -1,8 +1,5 @@
-@extends('layouts.template')
-
-@section('title', 'DHShop - adminCustomers')
-
-@section('main')
+@extends('layouts.master')
+@section('content')
 
 <br>
 <h1>Eliminar usuario</h1>

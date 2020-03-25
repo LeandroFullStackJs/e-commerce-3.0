@@ -1,8 +1,5 @@
-@extends('layouts.template')
-
-@section('title', 'Eliminar producto')
-
-@section('main')
+@extends('layouts.master')
+@section('content')
 
 <br>
 <h1>Eliminar producto</h1>

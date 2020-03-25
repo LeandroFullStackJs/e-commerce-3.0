@@ -1,8 +1,10 @@
-@extends('layouts.template')
+@extends('layouts.master')
 
-@section('title', 'Eliminar marca')
+{{-- @extends('layouts.template') --}}
 
-@section('main')
+{{-- @section('title', 'Eliminar marca') --}}
+
+@section('content')
 
 <br>
 <h1>Eliminar marca</h1>
