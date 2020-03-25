@@ -67,17 +67,17 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/wallet-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="/products">Laptops</a>
+                        <a class="btn hvr-hover" href="/products?Category=Laptop">Laptops</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/women-bag-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="/products?Category=Auriculares%20con%20cable">Headsets</a>
+                        <a class="btn hvr-hover" href="/products?Category=Headset">Headsets</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/shoes-img.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="/products">Mouse</a>
+                        <a class="btn hvr-hover" href="/products?Category=Mouse">Mouse</a>
                     </div>
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{{asset('front_assets/images/women-shoes-img.jpg')}}" alt="" />

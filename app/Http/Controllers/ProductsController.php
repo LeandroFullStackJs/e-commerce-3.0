@@ -224,7 +224,7 @@ class ProductsController extends Controller
 
     public function list() // listar productos para el cliente
     {
-        $pagination = 4;
+        $pagination = 3;
         $Categories = Category::all();
         if (request()->Category){
           $Products = Product::with('category')->whereHas('category',function($query){
