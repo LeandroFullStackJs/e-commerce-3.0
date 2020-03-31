@@ -33,7 +33,6 @@
                         <form action="/checkout" method="POST" id="payment-form">
                           @csrf
                             <div class="row">
-
                             </div>
                             <div class="mb-3">
                                 <label for="name">Name *</label>
@@ -76,19 +75,7 @@
                                 <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
                             </div>
                           </div>
-
-                            {{-- <hr class="mb-4">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="same-address">
-                                <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="save-info">
-                                <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                            </div> --}}
                             <hr class="mb-4">
-
-
                             <div class="mb-3">
                                     <label for="name_on_card">Name on card</label>
                                     <input type="text" class="form-control"  id="name_on_card" name="name_on_card" value=""> <small class="text-muted">Full name as displayed on card</small>
@@ -110,16 +97,6 @@
                             <!-- Used to display form errors -->
                              <div id="card-errors" role="alert"></div>
                             <div class="row">
-                                {{-- <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">Expiration</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                    <div class="invalid-feedback"> Expiration date required </div>
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">CVV</label>
-                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                    <div class="invalid-feedback"> Security code required </div>
-                                </div> --}}
                                 <div class="col-md-6 mb-3">
                                     <div class="payment-icon">
                                         <ul>
@@ -131,12 +108,7 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-
-
-
-                          {{-- </form> --}}
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-6 mb-3">
@@ -151,13 +123,6 @@
                                         <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
                                         <label class="custom-control-label" for="shippingOption1">Standard Delivery</label> <span class="float-right font-weight-bold">FREE</span> </div>
                                     <div class="ml-4 mb-2 small">(3-7 business days)</div>
-                                    {{-- <div class="custom-control custom-radio">
-                                        <input id="shippingOption2" name="shipping-option" class="custom-control-input" type="radio">
-                                        <label class="custom-control-label" for="shippingOption2">Express Delivery</label> <span class="float-right font-weight-bold">$10.00</span> </div>
-                                    <div class="ml-4 mb-2 small">(2-4 business days)</div>
-                                    <div class="custom-control custom-radio">
-                                        <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
-                                        <label class="custom-control-label" for="shippingOption3">Next Business day</label> <span class="float-right font-weight-bold">$20.00</span> </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -205,10 +170,6 @@
                                 <hr> </div>
                         </div>
                         <div class="col-12 d-flex shopping-box">
-                          {{-- <form action="/checkout" method="POST">
-                          @csrf
-                          <button type="submit" class="ml-auto btn hvr-hover">Place Order</button>
-                          </form> --}}
                           <button type="submit" id="complete-order" class="ml-auto btn hvr-hover">Complete Order</button>
                          </div>
                          </form>

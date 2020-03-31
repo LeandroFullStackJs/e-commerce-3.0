@@ -1,43 +1,34 @@
 
 @extends('layouts.master')
 
-{{-- @extends('layouts.template') --}}
-
-{{-- @section('title', 'Ingreso de administradores') --}}
-
 @section('content')
   
 <body>
     @include('sweetalert::alert')
-  <div class="my-account-box-main">
+    <div class="my-account-box-main">
+        <h1>Ingreso de administradores</h1>
+        <form action="" method="post">
+            @if ($errors->any())
+            <div class="alert alert-danger text-left">
+                <ul class="text-left">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
 
-<h1>Ingreso de administradores</h1>
+            @csrf
+            Usuario:
+            <input value="{{old('user')}}" class="form-control" type="text" name="user" class="form-control" require>
+            <br>
 
-<form action="" method="post">
+            Contraseña:
+            <input type="password" name="password" class="form-control" require>
+            <br>
 
-    @if ($errors->any())
-    <div class="alert alert-danger text-left">
-        <ul class="text-left">
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+            <input type="submit" value="Entrar">
+        </form>
     </div>
-    @endif
-
-    @csrf
-    Usuario:
-    <input value="{{old('user')}}" class="form-control" type="text" name="user" class="form-control" require>
-    <br>
-
-    Contraseña:
-    <input type="password" name="password" class="form-control" require>
-    <br>
-
-    <input type="submit" value="Entrar">
-</form>
-</div>
-
 </body>
-
 @endsection

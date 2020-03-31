@@ -1,13 +1,9 @@
-{{-- @extends('layouts.template') --}}
 @extends('layouts.master')
-
-
 
 @section('content')
   <body>
       @include('sweetalert::alert')
     <h1>Administración</h1>
-
     <div class="list-group">
         <a class="list-group-item list-group-item-action" href="adminMarks">
             Administración de Marcas
@@ -22,9 +18,6 @@
             Administración de Usuarios
         </a>
     </div>
-
     <br>
-
     <a class="py-2" href="adminLogOut">Cerrar sesion de administrador</a>
-    
 @endsection

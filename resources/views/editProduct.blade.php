@@ -1,11 +1,8 @@
 @extends('layouts.master')
 
-{{-- @section('title', 'Editar producto') --}}
-
 @section('content')
-<br><br>
+    <br><br>
     <h1>Formulario de modificación de un producto</h1>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -15,7 +12,6 @@
             </ul>
         </div>
     @endif
-
     <form action="" method="post" enctype="multipart/form-data">
         @csrf
         Nombre:
@@ -42,23 +38,18 @@
         <select name="category_id" class="form-control">
             <option value="">Seleccione una categoría</option>
             @foreach ($Categories as $Category)
-
                 @if(is_null(old('category_id')))
-
                     @if($Product->category_id == $Category->id)
                         <option value="{{$Category->id}}" selected>{{$Category->name}}</option>
                     @else
                         <option value="{{$Category->id}}">{{$Category->name}}</option>
                     @endif
-
                 @else
-
                     @if(old('category_id') == $Category->id)
                         <option value="{{$Category->id}}" selected>{{$Category->name}}</option>
                     @else
                         <option value="{{$Category->id}}">{{$Category->name}}</option>
                     @endif
-
                 @endif
             @endforeach
         </select>
@@ -94,5 +85,4 @@
         <input class="btn btn-danger" type="button" value="Volver" onclick="location.href='/adminProducts';">
         <br> <br>
     </form>
-
 @endsection

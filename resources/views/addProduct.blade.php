@@ -1,9 +1,7 @@
 @extends('layouts.master')
 
-{{-- @section('title', 'Agregar un producto') --}}
-
 @section('content')
-<br><br>
+    <br><br>
     <h1>Formulario de alta de un producto</h1>
 
     @if ($errors->any())
@@ -15,8 +13,6 @@
             </ul>
         </div>
     @endif
-
-
     <form action="" method="post" enctype="multipart/form-data">
         @csrf
         Nombre:
@@ -64,10 +60,9 @@
             @endforeach
         </select>
         <br>
-
+        
         <input class="btn btn-success" type="submit" value="Agregar">
         <input class="btn btn-danger" type="button" value="Volver" onclick="location.href='/adminProducts';">
         <br> <br>
     </form>
-
 @endsection

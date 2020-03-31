@@ -12,7 +12,6 @@
 </div>
 
 <article class="nosotros">
-
     <h2 class="subtitle">Sobre nosotros</h2>
     <div class="accordion" id="accordionExample">
         <div class="card">
@@ -23,18 +22,17 @@
                     </button>
                 </h2>
             </div>
-
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                     Somos un grupo de estudiantes de Digital House, que surgió con el propósito de crear una página destinada al mercado.
                 </div>
             </div>
         </div>
+    </div>
 </article>
 <article class="servicios">
     <h2 class="subtitle">Nuestro servicio</h2>
     <div class="accordion" id="accordionExample">
-
         <div class="card">
             <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
@@ -60,17 +58,15 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
-           Para ser parte de esta comunidad, solo precisas introducir tus datos personales, y una imagen a elección, que servirá para reconocerte. Para ello, dirigirse hacia el extremo derecho superior y presionar sobre el botón que dice “Crear Cuenta”.
+                    Para ser parte de esta comunidad, solo precisas introducir tus datos personales, y una imagen a elección, que servirá para reconocerte. Para ello, dirigirse hacia el extremo derecho superior y presionar sobre el botón que dice “Crear Cuenta”.
                 </div>
             </div>
         </div>
     </div>
 </article>
-
 <article class="cuenta">
     <h2 class="subtitle">Mi cuenta</h2>
     <div class="accordion" id="accordionExample">
-
         <div class="card">
             <div class="card-header" id="headingFour">
                 <h2 class="mb-0">
@@ -154,7 +150,5 @@
         <br>
     </div>
 </article>
-
-
 
 @endsection

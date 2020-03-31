@@ -20,32 +20,27 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-
-						<option>$ ARS</option>
-                        {{-- <option>$ USD</option> --}}
-
-					</select>
+                            <option>
+                                $ ARS
+                            </option>
+					    </select>
                     </div>
                     <div class="right-phone-box">
                         <p>Llamanos :- <a href="#"> +11 900 800 100</a></p>
                     </div>
-
-
-            </section>
                     <div class="our-link">
                         <ul>
-                        @if(Auth::user() == null)
-                        <li> <a href='/register' id='registrarme'>Crear cuenta</a> </li>
-                        <li> <a href='/login' id='ingresar'>Ingresar</a> </li>
-                @else
-                <li> <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Cerrar sesión
-                    </a> </li>
+                            @if(Auth::user() == null)
+                                <li> <a href='/register' id='registrarme'>Crear cuenta</a> </li>
+                                <li> <a href='/login' id='ingresar'>Ingresar</a> </li>
+                                @else
+                                <li> <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar sesión</a>
+                                </li>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                @endif
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            @endif
                             <li><a href="/profile">Mi usuario</a></li>
                             <li><a href="/contact-us"> Contactanos </a></li>
                         </ul>
@@ -76,63 +71,6 @@
                         <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
-                        {{-- <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products</a>
-                            <ul class="dropdown-menu megamenu-content" role="menu">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-menu col-md-3">
-                                            <a href="/products" class="title">Top</a>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="/shop">Jackets</a></li>
-                                                    <li><a href="/shop">Shirts</a></li>
-                                                    <li><a href="/shop">Sweaters & Cardigans</a></li>
-                                                    <li><a href="/shop">T-shirts</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                        <div class="col-menu col-md-3">
-                                            <a href="/products" class="title">Bottom</a>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="/shop">Swimwear</a></li>
-                                                    <li><a href="/shop">Skirts</a></li>
-                                                    <li><a href="/shop">Jeans</a></li>
-                                                    <li><a href="/shop">Trousers</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                        <div class="col-menu col-md-3">
-                                            <a href="/products" class="title">Clothing</a>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="/shop">Top Wear</a></li>
-                                                    <li><a href="/shop">Party wear</a></li>
-                                                    <li><a href="/shop">Bottom Wear</a></li>
-                                                    <li><a href="/shop">Indian Wear</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-menu col-md-3">
-                                            <a href="/products" class="title">Accessories</a>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="/shop">Bags</a></li>
-                                                    <li><a href="/shop">Sunglasses</a></li>
-                                                    <li><a href="/shop">Fragrances</a></li>
-                                                    <li><a href="/shop">Wallets</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                    </div>
-                                    <!-- end row -->
-                                </li>
-                            </ul>
-                        </li> --}}
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -149,23 +87,24 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li><form action="{{route('products.search')}}" method="POST" role="search"
-                        style= "position: relative;top: 20px;">
-                        {{ csrf_field() }}
-                        <div class="input-group">
-                        <input type="text" class="form-control" name="q"
-                        placeholder="Search here...">
-                        <button type="submit" class="btn btn-default">
-                        <a href="#"><i class="fa fa-search"></i></a>
-                        <!-- <span class="glyphicon glyphicon-search"></span> -->
-                        </button>
-      
-    </div>
-</form></li>
-                        <li class="side-menu"><a href="/cart">
-						<i class="fa fa-shopping-bag"></i>
-                            {{-- <span class="badge">3</span> --}}
-					</a></li>
+                        <li>
+                            <form action="{{route('products.search')}}" method="POST" role="search" style= "position: relative;top: 20px;">
+                            {{ csrf_field() }}
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="q"
+                                    placeholder="Search here...">
+                                    <button type="submit" class="btn btn-default">
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                    <!-- <span class="glyphicon glyphicon-search"></span> -->
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="side-menu">
+                            <a href="/cart">
+                            <i class="fa fa-shopping-bag"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->

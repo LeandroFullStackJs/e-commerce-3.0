@@ -29,10 +29,6 @@
     <link rel="stylesheet" href="{{asset('front_assets/css/custom.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 @include('sweetalert::alert')
 </head>
 
@@ -42,10 +38,6 @@
  @yield('content')
 
  @include('layouts.footer')
-
-
-
-
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->

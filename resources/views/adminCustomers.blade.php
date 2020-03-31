@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
-{{-- @section('title', 'Administrador de usuarios') --}}
-
 @section('content')
     <h1>Panel de administración de usuarios</h1>
 
@@ -19,27 +17,23 @@
                 <th>Telefono</th>
                 <th>Dirección</th>
                 <th colspan="2"></th>
-              </tr>
-        </thead>
-    <tbody>
-
-        @foreach($Customers as $Customer)
-
-            <tr>
-                <td>{{ $Customer->id }}</td>
-                <td>{{ $Customer->first_name }}</td>
-                <td>{{ $Customer->last_name }}</td>
-                <td>{{ $Customer->email }}</td>
-                <td><img class="img-fluid img-thumbnail main-image" src="user_img/{{$Customer->image}}" alt=""></td>
-                <td>{{ $Customer->birthdate }}</td>
-                <td>{{ $Customer->phone }}</td>
-                <td>{{ $Customer->address }}</td>
-                <td><a href="deleteCustomer/{{ $Customer->id }}" class="btn btn-outline-secondary">Eliminar</a></td>
             </tr>
-
-        @endforeach
-
-    </tbody>
+        </thead>
+        <tbody>
+            @foreach($Customers as $Customer)
+                <tr>
+                    <td>{{ $Customer->id }}</td>
+                    <td>{{ $Customer->first_name }}</td>
+                    <td>{{ $Customer->last_name }}</td>
+                    <td>{{ $Customer->email }}</td>
+                    <td><img class="img-fluid img-thumbnail main-image" src="user_img/{{$Customer->image}}" alt=""></td>
+                    <td>{{ $Customer->birthdate }}</td>
+                    <td>{{ $Customer->phone }}</td>
+                    <td>{{ $Customer->address }}</td>
+                    <td><a href="deleteCustomer/{{ $Customer->id }}" class="btn btn-outline-secondary">Eliminar</a></td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
 
     <a href="admin" class="btn btn-outline-secondary m-3">Volver a principal</a>
