@@ -73,10 +73,6 @@ Route::post('/removeProduct', 'CartsController@removeProduct');
 Route::post('/checkout', 'CheckoutController@checkout');
 Route::get('/checkout', 'CheckoutController@show');
 
-
-
-
-
 ########### Admin #############
 Route::get('/adminLogIn', 'AdminsController@logInForm')->middleware('adminLogged');
 Route::post('/adminLogIn', 'AdminsController@logIn')->middleware('adminLogged');
