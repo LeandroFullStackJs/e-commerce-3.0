@@ -26,8 +26,9 @@
                 <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
                     <div class="product-categori">
                         <div class="search-product">
-                            <form action="#">
-                                <input class="form-control" placeholder="Search here..." type="text">
+                            <form action="{{route('products.search')}}" method="POST" role="search">
+                            {{ csrf_field() }}
+                                <input class="form-control" placeholder="Search here..." type="text" name='q'>
                                 <button type="submit"> <i class="fa fa-search"></i> </button>
                             </form>
                         </div>
@@ -122,7 +123,7 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
 
-                                    <h1 align="center">{{$CategoryName}}</h1>
+                                    <h1 align="center">{{$SearchTitle}}</h1>
 
                                     <div class="row">
                                       @forelse ($Products as $Product)
@@ -165,7 +166,7 @@
 
                                 <div role="tabpanel" class="tab-pane fade" id="list-view">
                                     <div class="list-view-box">
-                                      <h1 align="center">{{$CategoryName}}</h1>
+                                      <h1 align="center">{{$SearchTitle}}</h1>
                                         <div class="row">
                                            @forelse ($Products as $Product)
                                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">

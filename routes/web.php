@@ -45,6 +45,7 @@ Route::get('/addImages/{id}', 'ProductsController@addImages')->middleware('admin
 Route::post('/addImages/{id}', 'ProductsController@addImages')->middleware('admin');
 Route::get('/delete-alt-image/{id}','ProductsController@deleteAltImage')->middleware('admin');
 Route::get('/products', 'ProductsController@list') -> name('products.list');
+Route::post('/products', 'ProductsController@search') -> name('products.search');
 Route::get('/products/{id}', 'ProductsController@show');
 Route::get('/adminProducts', 'ProductsController@index')->middleware('admin');
 Route::get('/addProduct', 'ProductsController@create')->middleware('admin');

@@ -222,36 +222,67 @@ class ProductsController extends Controller
        return redirect()->back();
    }
 
-    public function list() // listar productos para el cliente
-    {
-        $pagination = 3;
-        $Categories = Category::all();
-        if (request()->Category){
-          $Products = Product::with('category')->whereHas('category',function($query){
-            $query -> where( 'name', request()->Category);
-          });
-           $Marks =Mark::all();
-           $CategoryName = $Categories->where('name',request()->Category)->first()->name;
-        } else{
-          $Products = Product::take(12);
+   public function list() // listar productos para el cliente
+   {   
+       $pagination = 3;
+       $Categories = Category::all();
+       $CategoryName = $Categories->first()->name;
+       if (request()->Category){
+         $Products = Product::with('category')->whereHas('category',function($query){
+                                                                    $query -> where( 'name', request()->Category);});
           $Marks =Mark::all();
-          $CategoryName ='Featured';
+          $CategoryName = $Categories->where('name',request()->Category)->first()->name;
+          $SearchTitle = $CategoryName;
+       } else{
+         $Products = Product::take(12);
+         $Marks =Mark::all();
+         $SearchTitle ='Featured';
+       }
+
+        if(request()->sort == 'low_high'){
+            $Products= $Products -> orderBy('price')->paginate($pagination);
+            // $Products->values()->all();
         }
-
-         if(request()->sort == 'low_high'){
-             $Products= $Products -> orderBy('price')->paginate($pagination);
-             // $Products->values()->all();
-         }
-       else if(request()->sort == 'high_low' ){
-         $Products= $Products -> orderBy('price','desc')->paginate($pagination);
-         // $Products->values()->all();
-} else{
-    $Products = $Products -> paginate($pagination);
-}
+      else if(request()->sort == 'high_low' ){
+        $Products= $Products -> orderBy('price','desc')->paginate($pagination);
+        // $Products->values()->all();
+               } else{
+                       $Products = $Products -> paginate($pagination);
+                     }
 
 
-        return view('/products', compact('Products' , 'Categories' , 'Marks','CategoryName'));
-    }
+       return view('/products', compact('Products' , 'Categories' , 'Marks','CategoryName','SearchTitle'));
+   }
+
+// MOTOR DE BUSQUEDA (PRODUCTOS O CATEGORIAS)
+public function search() 
+   {
+     
+       $q = Input::get ( 'q' );
+       $Search = Product::where('name','LIKE','%'.$q.'%')->get();
+      
+       // buscador por categoria
+       if(count($Search)<1){
+       $Categories = Category::where('name','LIKE','%'.$q.'%');
+       $IdCategories= $Categories->first()->id;
+       $Products = Product::where('category_id',$IdCategories);
+       $SearchTitle = $Categories->first()->name;
+       
+       }
+       //BUSCA POR producto:
+       else{
+       $Products = Product::where('name','LIKE','%'.$q.'%');       
+       $IdMark= $Products->first()->mark_id;
+       $SearchTitle = Mark::where('id',$IdMark)->first()->name;
+        }  
+
+       $Categories = Category::all();
+       $CategoryName = $Categories->first()->name;
+       $Marks =Mark::all();
+       $Products = $Products -> paginate(9);
+
+       return view('/products', compact('Products' , 'Categories' , 'Marks','CategoryName','SearchTitle'));
+   }
 
 public function addImages (Request $request,$id=null){
   $ProductDetails = Product::where(['id' => $id])->first();

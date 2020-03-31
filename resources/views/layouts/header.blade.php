@@ -149,7 +149,19 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><form action="{{route('products.search')}}" method="POST" role="search"
+                        style= "position: relative;top: 20px;">
+                        {{ csrf_field() }}
+                        <div class="input-group">
+                        <input type="text" class="form-control" name="q"
+                        placeholder="Search here...">
+                        <button type="submit" class="btn btn-default">
+                        <a href="#"><i class="fa fa-search"></i></a>
+                        <!-- <span class="glyphicon glyphicon-search"></span> -->
+                        </button>
+      
+    </div>
+</form></li>
                         <li class="side-menu"><a href="/cart">
 						<i class="fa fa-shopping-bag"></i>
                             {{-- <span class="badge">3</span> --}}
