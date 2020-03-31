@@ -12,8 +12,6 @@ use App\Mark;
 use App\ProductsImages;
 use DB;
 
-
-
 class ProductsController extends Controller
 {
     /**
@@ -76,12 +74,9 @@ class ProductsController extends Controller
             ]
         );
 
-
-
         $imageName = time() . '.' . $request['image']->getClientOriginalExtension();
 
         $request['image']->move(public_path('product_img/'), $imageName);
-
 
         $Product = new Product;
         $Product->name = $request['name'];
@@ -108,9 +103,6 @@ class ProductsController extends Controller
       $Product = Product::find($id);
       $ProductsAltImages = ProductsImages::where('product_id',$id)->get();
       return view('product-detail', compact('Product','ProductsAltImages'));
-
-
-
     }
 
     /**
@@ -172,7 +164,6 @@ class ProductsController extends Controller
             $Product->image = $imageName;
         }
 
-
         $Product->name = $request['name'];
         $Product->price = $request['price'];
         $Product->stock = $request['stock'];
@@ -211,106 +202,98 @@ class ProductsController extends Controller
         return redirect('/adminProducts');
     }
     public function deleteAltImage($id=null){
-       $productImage = ProductsImages::where(['id'=>$id])->first();
+        $productImage = ProductsImages::where(['id'=>$id])->first();
 
-       $image_path = 'product_img/';
-       if(file_exists($image_path.$productImage->image)){
-           unlink($image_path.$productImage->image);
-       }
-       ProductsImages::where(['id'=>$id])->delete();
-       Alert::success('Deleted','Success Message');
-       return redirect()->back();
-   }
+        $image_path = 'product_img/';
+        if(file_exists($image_path.$productImage->image)){
+            unlink($image_path.$productImage->image);
+        }
+        ProductsImages::where(['id'=>$id])->delete();
+        Alert::success('Deleted','Success Message');
+        return redirect()->back();
+    }
 
-   public function list() // listar productos para el cliente
-   {   
+    public function list() // listar productos para el cliente
+    {   
        $pagination = 3;
        $Categories = Category::all();
        $CategoryName = $Categories->first()->name;
-       if (request()->Category){
-         $Products = Product::with('category')->whereHas('category',function($query){
+        if (request()->Category){
+            $Products = Product::with('category')->whereHas('category',function($query){
                                                                     $query -> where( 'name', request()->Category);});
-          $Marks =Mark::all();
-          $CategoryName = $Categories->where('name',request()->Category)->first()->name;
-          $SearchTitle = $CategoryName;
-       } else{
-         $Products = Product::take(12);
-         $Marks =Mark::all();
-         $SearchTitle ='Featured';
-       }
+            $Marks =Mark::all();
+            $CategoryName = $Categories->where('name',request()->Category)->first()->name;
+            $SearchTitle = $CategoryName;
+        } else{
+            $Products = Product::take(12);
+            $Marks =Mark::all();
+            $SearchTitle ='Featured';
+        }
 
         if(request()->sort == 'low_high'){
             $Products= $Products -> orderBy('price')->paginate($pagination);
-            // $Products->values()->all();
+            
         }
-      else if(request()->sort == 'high_low' ){
-        $Products= $Products -> orderBy('price','desc')->paginate($pagination);
-        // $Products->values()->all();
-               } else{
-                       $Products = $Products -> paginate($pagination);
-                     }
+        else if(request()->sort == 'high_low' ){
+            $Products= $Products -> orderBy('price','desc')->paginate($pagination);
+        
+        } else{
+            $Products = $Products -> paginate($pagination);
+        }
 
 
        return view('/products', compact('Products' , 'Categories' , 'Marks','CategoryName','SearchTitle'));
    }
 
-// MOTOR DE BUSQUEDA (PRODUCTOS O CATEGORIAS)
-public function search() 
-   {
-     
-       $q = Input::get ( 'q' );
-       $Search = Product::where('name','LIKE','%'.$q.'%')->get();
-      
-       // buscador por categoria
-       if(count($Search)<1){
-       $Categories = Category::where('name','LIKE','%'.$q.'%');
-       $IdCategories= $Categories->first()->id;
-       $Products = Product::where('category_id',$IdCategories);
-       $SearchTitle = $Categories->first()->name;
-       
-       }
-       //BUSCA POR producto:
-       else{
-       $Products = Product::where('name','LIKE','%'.$q.'%');       
-       $IdMark= $Products->first()->mark_id;
-       $SearchTitle = Mark::where('id',$IdMark)->first()->name;
+    // MOTOR DE BUSQUEDA (PRODUCTOS O CATEGORIAS)
+    public function search() 
+    {
+        
+        $q = Input::get ( 'q' );
+        $Search = Product::where('name','LIKE','%'.$q.'%')->get();
+        
+        // buscador por categoria
+        if(count($Search)<1){
+            $Categories = Category::where('name','LIKE','%'.$q.'%');
+            $IdCategories= $Categories->first()->id;
+            $Products = Product::where('category_id',$IdCategories);
+            $SearchTitle = $Categories->first()->name;
+        }
+        //BUSCA POR producto:
+        else{
+            $Products = Product::where('name','LIKE','%'.$q.'%');       
+            $IdMark= $Products->first()->mark_id;
+            $SearchTitle = Mark::where('id',$IdMark)->first()->name;
         }  
 
-       $Categories = Category::all();
-       $CategoryName = $Categories->first()->name;
-       $Marks =Mark::all();
-       $Products = $Products -> paginate(9);
+        $Categories = Category::all();
+        $CategoryName = $Categories->first()->name;
+        $Marks =Mark::all();
+        $Products = $Products -> paginate(9);
 
-       return view('/products', compact('Products' , 'Categories' , 'Marks','CategoryName','SearchTitle'));
-   }
-
-public function addImages (Request $request,$id=null){
-  $ProductDetails = Product::where(['id' => $id])->first();
-  if ($request->isMethod('post')) {
-    $data = $request ->all();
-    if($request->hasfile('image')){
-      $files = $request ->file('image');
-      foreach ($files as $file) {
-        $image = new ProductsImages;
-        $extension = $file ->getClientOriginalExtension();
-        $filename = rand(111,9999).'.'.$extension;
-        $image_path = (public_path('product_img/') . $filename);
-        Image::make($file)->save($image_path);
-        $image->image = $filename;
-        $image->product_id = $data['product_id'];
-        $image->save();
-      }
+        return view('/products', compact('Products' , 'Categories' , 'Marks','CategoryName','SearchTitle'));
     }
-    return redirect('addImages/'.$id)->with('flash_message_success','Se agrego la imagen ');
-  }
-  $productImages = ProductsImages::where(['product_id'=>$id])->get();
-  return view ('addImages')->with(compact('ProductDetails','productImages'));
-}
 
-// public function products($id=null){
-//   $productsAltImages = ProductsImages::where('product_id',$id)->get();
-//   return view('/product-detail')->with(compact('productDetails','ProductsAltImages'));
-// }
-
-
+    public function addImages (Request $request,$id=null){
+    $ProductDetails = Product::where(['id' => $id])->first();
+    if ($request->isMethod('post')) {
+        $data = $request ->all();
+        if($request->hasfile('image')){
+        $files = $request ->file('image');
+            foreach ($files as $file) {
+                $image = new ProductsImages;
+                $extension = $file ->getClientOriginalExtension();
+                $filename = rand(111,9999).'.'.$extension;
+                $image_path = (public_path('product_img/') . $filename);
+                Image::make($file)->save($image_path);
+                $image->image = $filename;
+                $image->product_id = $data['product_id'];
+                $image->save();
+            }
+        }
+        return redirect('addImages/'.$id)->with('flash_message_success','Se agrego la imagen ');
+    }
+    $productImages = ProductsImages::where(['product_id'=>$id])->get();
+    return view ('addImages')->with(compact('ProductDetails','productImages'));
+    }
 }
