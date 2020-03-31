@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e2394ef576486af741571654c8bb6fb",
+    "content-hash": "13b49ff85f15b361b866d011710452e4",
     "packages": [
         {
             "name": "cartalyst/stripe",
