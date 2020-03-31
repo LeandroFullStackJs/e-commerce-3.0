@@ -19,16 +19,16 @@
 }
 
 .products-section {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr;
+}
 
-  .products-section .sidebar {
-    text-align: center;
-  }
+.products-section .sidebar {
+  text-align: center;
+}
 
-  .products-section .products {
-    grid-template-columns: 1fr;
-  }
+.products-section .products {
+  grid-template-columns: 1fr;
+}
 
 .sidebar h3 {
   font-weight: bold;
@@ -44,11 +44,9 @@
   font-weight: 500;
 }
 
-
 .products-section .sidebar {
-    text-align: center;
-  }
-
+  text-align: center;
+}
 
 .my-profile label {
   display: block;
@@ -78,8 +76,8 @@
 }
 
 .my-profile input {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 .products-header {
   display: flex;
@@ -87,9 +85,9 @@
 }
 
 .products-header {
-    flex-direction: column;
-    margin-bottom: 48px;
-  }
+  flex-direction: column;
+  margin-bottom: 48px;
+}
 
 h1.stylish-heading {
   margin-bottom: 60px;
@@ -134,12 +132,12 @@ h1.stylish-heading:after {
 }
 
 .my-orders .order-header-items {
-    display: block;
-  }
+  display: block;
+}
 
-  .my-orders .order-header-items > div {
-    margin-bottom: 14px;
-  }
+.my-orders .order-header-items > div {
+  margin-bottom: 14px;
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -148,6 +146,7 @@ h1.stylish-heading:after {
 .font-bold {
   font-weight: bold;
 }
+
 .my-orders .order-products {
   background: white;
   border: 1px solid #DDDDDD;
@@ -163,7 +162,6 @@ h1.stylish-heading:after {
   max-width: 140px;
   margin-right: 24px;
 }
-
 
 .my-orders .order-header-items {
   display: flex;

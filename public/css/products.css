@@ -35,8 +35,3 @@ section.products-list a.product {
 section.products-list a:nth-child(even){
     background-color: aliceblue;
 }
-
-
-/* section.products-list article.product img{
-    width: 100%;
-} */

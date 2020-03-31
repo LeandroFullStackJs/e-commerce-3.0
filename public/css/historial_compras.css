@@ -68,7 +68,6 @@ section.products-list article.product-added div.purchase-date {
 }
 
 @media (max-width: 575.98px){
-
     section.row{
         display: flex;
         margin-bottom: 10px;
@@ -94,5 +93,3 @@ section.products-list article.product-added div.purchase-date {
         align-items: center;
     }
 }
-
-

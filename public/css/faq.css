@@ -5,7 +5,6 @@ header, footer{
 }
 
 /* BODY */
-
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -16,7 +15,6 @@ div.container-fluid{
 }
 
 /* HEADER */
-
 header{
     background-color: lightblue;
 }
@@ -30,7 +28,6 @@ header section.logo-usuario{
 .logo h1{
     font-size: 4.5em;
 }
-
 
 header section.logo-usuario article.usuario-acciones{
     margin-left: auto;
@@ -55,7 +52,6 @@ header hr{
 }
 
 /* NAVBAR */
-
 nav#nav{
     background-color: lightblue;
 }
@@ -71,9 +67,6 @@ nav#nav{
 .subtitle{
     font-size: 1.5em;
 }
-
-
-
 
 /* FOOTER */
 footer{

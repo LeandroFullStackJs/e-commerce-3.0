@@ -9,37 +9,24 @@ section.user{
 }
 
 section.user article.user-info{
-    
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 5px;
 }
-
 
 section.user article.user-info form{
     padding: 10px;
 }
 
-
-
 /* COSAS QUE SE VEN */
 #id, #oimg{
     display: none;
 }
-/* ----------------------------------------------- */
-
-
-
 
 section.user article.user-info form div.button-container{
     text-align: center;
 }
 
-
 section.user article.user-info div.imgAndHistory-container{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    */
     padding-top: 20px;
     text-align: center;
 }
@@ -53,12 +40,6 @@ section.user article.user-info div.imgAndHistory-container a{
     max-width: 300px;
     margin-bottom: 25px;
 }
-
-
-
-
-
-
 
 @media (max-width: 767.98px){
     section.user article.user-info form {
