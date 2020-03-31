@@ -255,9 +255,15 @@ class ProductsController extends Controller
         // buscador por categoria
         if(count($Search)<1){
             $Categories = Category::where('name','LIKE','%'.$q.'%');
-            $IdCategories= $Categories->first()->id;
-            $Products = Product::where('category_id',$IdCategories);
-            $SearchTitle = $Categories->first()->name;
+            $IfCat = Category::where('name', 'LIKE', '%'.$q.'%')->get();
+            if ($IfCat->isEmpty()) {
+                $Products = Product::take(12);
+                $SearchTitle = 'No found item, but we recommend you';
+                }
+                else{
+                    $IdCategories= $Categories->first()->id;
+                    $Products = Product::where('category_id',$IdCategories);
+                    $SearchTitle = $Categories->first()->name;}
         }
         //BUSCA POR producto:
         else{
